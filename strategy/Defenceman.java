@@ -9,6 +9,6 @@ public class Defenceman extends Player //gets free methods from Player class.
 
     public void setBehavior()
     {
-        behavior = new BlockBehavior();
+        behavior = new BlockBehavior(); //calls the block behavior for defense. 
     }
 }

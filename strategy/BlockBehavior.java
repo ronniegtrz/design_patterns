@@ -3,7 +3,7 @@ package strategy;
 public class BlockBehavior implements Behavior { //following the "rulebook" of Behavior"
     public String play() //making its own play method
     {
-        return "blocked the defender"; 
+        return "blocked the attacker"; 
     }
 
     public String getArt()
