@@ -2,7 +2,9 @@ package observer;
 /**
  * 
  * Sector
+ * 
+ * the industry that the stock belongs to
  */
 public enum Sector {
-    TECHNOLOGY, HEAlTHCARE, FINANCE, ENERGY, RETAIL
+    TECHNOLOGY, HEALTHCARE, FINANCE, ENERGY, RETAIL
 }

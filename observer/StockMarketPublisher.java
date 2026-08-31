@@ -2,21 +2,24 @@ package observer;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-
+/**
+ * this pushes out the updates when prices change
+ * StockMarketPublisher
+ */
 public class StockMarketPublisher implements Subject {
     
     private ArrayList<Observer> observers = new ArrayList<>();
     private HashMap<String, Stock> stocks = new HashMap<>();
-
+    /** Called by an Observers constructor */
     public void registerObserver(Observer observer)
     {
         observers.add(observer);
     }
-
+/** Removes an observer so its not being called anymore */
     public void removeObserver(Observer observer){
         observers.remove(observer);
     }
-
+    /** looks up stock by symbol moves the price and notifies the observers */
     public void updateStock(String symbol, double change){
         Stock stock = stocks.get(symbol);
         if (stock == null) 

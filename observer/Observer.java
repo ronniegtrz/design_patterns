@@ -1,5 +1,8 @@
 package observer;
-
+/**
+ * Base class for anything that watches stock updates for one sector
+ * Observer
+ */
 public abstract class Observer {
     private static final String RESET = "\033[0m";
     private static final String GREEN = "\033[32m";
@@ -8,7 +11,7 @@ public abstract class Observer {
     protected String name;
     protected Sector sector;
     protected String color;
-
+/** Creates an observer and registers it with the publisher */
     public Observer(Subject publisher, String name, Sector sector, String color){
         this.name = name;
         this.sector = sector;
@@ -18,7 +21,7 @@ public abstract class Observer {
 
         System.out.println(color + name.toUpperCase()+ RESET + " is monitoring the market");
     }
-
+/** this is called when a stock updates */ 
     public void update(Stock stock, Direction direction) {
         if (stock.getSector() != sector) {
             return; 
