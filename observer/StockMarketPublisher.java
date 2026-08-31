@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 /**
  * this pushes out the updates when prices change
- * StockMarketPublisher
  */
 public class StockMarketPublisher implements Subject {
     
@@ -31,13 +30,14 @@ public class StockMarketPublisher implements Subject {
         Direction direction = change >= 0 ? Direction.UP : Direction.DOWN;
         notifyObservers(stock, direction);
     }
-
+/** loops through every observer and calls update on each one */
     public void notifyObservers(Stock stock, Direction direction)
     {
         for (Observer o : observers){
             o.update(stock,direction);
         }
     }
+    /** creates a new stock and stores it */
     public void addStock(String symbol, String companyName, Sector sector, double price) {
         stocks.put(symbol, new Stock(symbol, companyName, sector, price));
     }
