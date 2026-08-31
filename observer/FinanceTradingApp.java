@@ -1,6 +1,6 @@
 package observer;
 /** Observer that only reacts to finance sector stock updates*
- * 
+ * @author Ronnie
  * FinanceTradingApp
 */
 public class FinanceTradingApp extends Observer {

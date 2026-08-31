@@ -1,7 +1,7 @@
 package observer;
 /**
  * 
- * Sector
+ * @author Ronnie
  * 
  * the industry that the stock belongs to
  */

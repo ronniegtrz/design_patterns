@@ -1,7 +1,7 @@
 package observer;
 /**
  * Base class for anything that watches stock updates for one sector
- * Observer
+ * @author Ronnie
  */
 public abstract class Observer {
     private static final String RESET = "\033[0m";

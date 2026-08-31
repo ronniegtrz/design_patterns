@@ -1,5 +1,7 @@
 package observer;
-/** represents one stock being tracked by StockMarketPublisher */
+/** represents one stock being tracked by StockMarketPublisher 
+ * @author Ronnie
+*/
 public class Stock {
     private String symbol; 
     private String companyName;

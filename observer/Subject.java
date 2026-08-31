@@ -1,6 +1,7 @@
 package observer;
 /**
  * this is what StockMarketPublisher will implement
+ * @author Ronnie
  */
 public interface Subject {
     /** adds an observer*/
