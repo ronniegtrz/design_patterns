@@ -6,6 +6,6 @@ package decorator;
  */
 public class Sword extends GearAdder{
     public Sword(Player player){
-        super(player, FileReader.getLines("sword.txt"));
+        super(player, FileReader.getLines("decorator/sword.txt"));
     }
 }
