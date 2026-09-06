@@ -25,7 +25,9 @@ public class Player  {
     
     @Override
     public String toString() {
-        return String.join("\n", character);
+        String header = "#### " + name + " ####";
+        String art = String.join("\n", character);
+        return header + "\n" + art; 
     }
 }
 
