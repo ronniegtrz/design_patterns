@@ -1,16 +1,31 @@
 package decorator;
 import java.util.ArrayList;
-
-public abstract class Player (String name, ArrayList<String> char) {
-    public 
-
-    public String getName()
-    {
-
+/**
+ * @author Ronnie
+ * 
+ * represents a player character made of art lines
+ */
+public class Player  {
+    protected String name; 
+    protected ArrayList<String> character; 
+    /** 
+     * creates a player with its art lines and a name.
+     */
+    public Player(ArrayList<String> character, String name) {
+        this.character = character;
+        this.name = name;
     }
-
-    public String toString()
-    {
-
+    /**
+     * name getter
+     * 
+     */
+    public String getName() {
+        return name; 
+    }
+    
+    @Override
+    public String toString() {
+        return String.join("\n", character);
     }
 }
+
