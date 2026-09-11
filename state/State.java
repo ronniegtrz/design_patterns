@@ -1,11 +1,10 @@
 package state;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Random;
 /**
  * @author Ronnie
  */
-import java.util.HashMap;
-import java.util.Random;
-
 
 public abstract class State {
     protected VocabularyList vocabularyList;
@@ -18,7 +17,7 @@ public abstract class State {
     }
 
     public String getNextDefinition() {
-        ArrayList<String> definitons = new ArrayList<>(words.ketSet());
+        ArrayList<String> definitions = new ArrayList<>(words.keySet());
         int index = rand.nextInt(definitions.size());
         return definitions.get(index);
     }
@@ -27,8 +26,8 @@ public abstract class State {
         return words.get(definition);
     }
 
-    public abstract void IncreaseGrade() 
+    public abstract void increaseGrade();
 
 
-    public abstract void DecreaseGrade() 
+    public abstract void decreaseGrade();
 }

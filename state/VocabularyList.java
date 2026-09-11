@@ -19,10 +19,10 @@ public class VocabularyList {
         return state.getMatchingWord(definition); 
     }
     public void increaseGrade() {
-        state.IncreaseGrade();
+        state.increaseGrade();
     }
     public void decreaseGrade() {
-        state.DecreaseGrade();
+        state.decreaseGrade();
     }
     public State getFirstGradeState() {
         return firstGradeState;
