@@ -1,4 +1,5 @@
 package state;
+import java.util.ArrayList;
 /**
  * @author Ronnie
  */
@@ -12,22 +13,22 @@ public abstract class State {
     private Random rand;
 
     public State (VocabularyList vocabularyList) {
-
+        this.vocabularyList = vocabularyList;
+        this.rand = new Random();
     }
 
     public String getNextDefinition() {
-
+        ArrayList<String> definitons = new ArrayList<>(words.ketSet());
+        int index = rand.nextInt(definitions.size());
+        return definitions.get(index);
     }
 
     public String getMatchingWord(String definition) {
-
+        return words.get(definition);
     }
 
-    public void IncreaseGrade() {
+    public abstract void IncreaseGrade() 
 
-    }
 
-    public void DecreaseGrade() {
-        
-    }
+    public abstract void DecreaseGrade() 
 }
