@@ -1,17 +1,25 @@
 package state;
-
+/**
+ * @author Ronnie
+ * VocabularyList
+ */
 public class VocabularyList {
     private State state;
     private FirstGradeState firstGradeState;
     private SecondGradeState secondGradeState;
     private ThirdGradeState thirdGradeState;
-
+/**
+ * state is used to point to a grade.
+ */
     public VocabularyList(){
         firstGradeState = new FirstGradeState(this);
         secondGradeState = new SecondGradeState(this);
         thirdGradeState = new ThirdGradeState(this);
         state = firstGradeState;
     }
+    /**
+     * whatever state is pointing to will return
+     */
     public String getNextDefinition(){
         return state.getNextDefinition();
     }
@@ -33,6 +41,10 @@ public class VocabularyList {
     public State getThirdGradeState() {
         return thirdGradeState;
     }
+    /**
+     * the "sticky note" mover. changes what state points to. 
+     * @param state
+     */
     public void setState(State state) {
         this.state = state; 
     }
