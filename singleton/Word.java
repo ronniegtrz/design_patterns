@@ -12,11 +12,16 @@ public class Word {
         this.definition = definition;
         this.sentence = sentence;
     }
-
+/**
+ * 
+ * the front of the card only returns the word
+ */
     public String getFlashCardFront() {
         return word;
     }
-
+/**
+ * the back of the card returns the type, definition, and sentence.
+ */
     public String getFlashCardBack() {
         return type + "\n" + definition + "\n" + sentence;
     }
