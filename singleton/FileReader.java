@@ -1,9 +1,11 @@
+package singleton;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class FileReader {
+public class FileReader{
     public static final String FILE_NAME = "singleton/txt/words.txt";
 
     /**
