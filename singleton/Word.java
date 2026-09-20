@@ -1,5 +1,8 @@
 package singleton;
-
+/**
+ * 
+ * @author Ronnie
+ */
 public class Word {
     private String word; 
     private String type;
